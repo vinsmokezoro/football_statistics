@@ -1,12 +1,11 @@
 .dashboard-wrapper {
   background: url(https://images.pexels.com/photos/3991976/pexels-photo-3991976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .tabs {
@@ -37,7 +36,6 @@
 .standings-wrapper {
   top: 130px;
   position: absolute;
-  height: calc(100vh - 170px);
   border-radius: 15px;
   width: 80vw;
   opacity: 0.7;
