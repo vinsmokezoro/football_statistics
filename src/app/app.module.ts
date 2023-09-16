@@ -11,8 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FootballService } from './components/services/football.service';
 import { StandingsComponent } from './components/standings/standings.component';
-import { FootballService } from './services/football.service';
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent, StandingsComponent],

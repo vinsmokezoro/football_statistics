@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { StandingsComponent } from './components/standings/standings.component';
 
 const routes: Routes = [
   {
@@ -11,13 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent,
-    children: [
-      {
-        path: 'standings',
-        component: StandingsComponent
-      }
-    ]
+    component: DashboardComponent
   },
 ];
 

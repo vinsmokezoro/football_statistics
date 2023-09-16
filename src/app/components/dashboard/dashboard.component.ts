@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FootballService } from '../services/football.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,8 +10,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   countries: string[] = ['England', 'Spain', 'France', 'Germany', 'Italy'];
+  selectedScreen: string = '';
+  selectedCountry: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private footballService: FootballService) {}
 
   ngOnInit(): void {}
+
+  selectScreen(screen: string, country: string) {
+    this.selectedScreen = screen;
+    this.selectedCountry = country;
+  }
 }

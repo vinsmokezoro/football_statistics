@@ -1,10 +1,14 @@
 <div class="dashboard-wrapper">
   <div class="tabs">
-    <div *ngFor="let country of countries" class="w-20p center-align">
+    <div
+      *ngFor="let country of countries"
+      class="w-20p center-align"
+      (click)="selectScreen('standings', country)"
+    >
       {{ country }}
     </div>
   </div>
-  <div class="standings-wrapper">
+  <div class="standings-wrapper" *ngIf="selectedScreen === 'standings'">
     <app-standings class="standings-container"></app-standings>
   </div>
 </div>
