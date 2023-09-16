@@ -13,10 +13,10 @@
   height: 50px;
   width: 80vw;
   background: white;
-  opacity: 0.6;
+  opacity: 0.7;
   border-radius: 15px;
   position: absolute;
-  top: 60px;
+  top: 40px;
   display: flex;
 }
 
@@ -32,4 +32,13 @@
   font-weight: 600;
   cursor: pointer;
   user-select: none;
+}
+
+.standings-wrapper {
+  top: 130px;
+  position: absolute;
+  height: calc(100vh - 170px);
+  border-radius: 15px;
+  width: 80vw;
+  opacity: 0.7;
 }
