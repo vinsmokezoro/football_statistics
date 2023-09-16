@@ -6,6 +6,8 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
 .tabs {
@@ -37,6 +39,36 @@
   top: 130px;
   position: absolute;
   border-radius: 15px;
+  height: calc(100vh - 170px);
   width: 80vw;
   opacity: 0.7;
+}
+
+.standings-container {
+  display: block;
+  height: calc(100vh - 170px);
+  overflow-y: scroll;
+  overflow-x: visible;
+  border: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ff000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff000000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff000000;
 }

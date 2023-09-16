@@ -17,10 +17,13 @@
   max-height: 500px;
 }
 
+.table {
+  border: none;
+}
+
 thead {
   position: sticky;
   top: -1px;
-  background-color: white;
 }
 
 .table tr th:first-child {
