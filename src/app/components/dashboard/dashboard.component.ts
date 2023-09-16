@@ -4,15 +4,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  host: { 'collision-id': 'DashboardComponent' },
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(
-    private router: Router
-  ) { }
+  countries: string[] = ['England', 'Spain', 'France', 'Germany', 'Italy'];
+
+  constructor() {}
 
   ngOnInit(): void {
   }
-
 }
