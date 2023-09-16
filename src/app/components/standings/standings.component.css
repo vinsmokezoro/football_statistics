@@ -10,6 +10,14 @@
   width: 25%;
 }
 
+.table-wrapper {
+  position: absolute;
+  height: 200px;
+  overflow: auto;
+  display: block;
+  max-height: 500px;
+}
+
 .table tr th:first-child {
   border-radius: 15px 0 0 0;
 }
