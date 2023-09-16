@@ -13,12 +13,18 @@ export class DashboardComponent implements OnInit {
   selectedScreen: string = '';
   selectedCountry: string = '';
 
-  constructor(private router: Router, private footballService: FootballService) {}
+  constructor(
+    private router: Router,
+    private footballService: FootballService
+  ) {}
 
   ngOnInit(): void {}
 
-  selectScreen(screen: string, country: string) {
+  getLeagues(screen: string, country: string) {
     this.selectedScreen = screen;
     this.selectedCountry = country;
+    this.footballService.getLeagues().subscribe((res) => {
+      console.log(res);
+    });
   }
 }
