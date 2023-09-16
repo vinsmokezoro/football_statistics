@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { StandingsComponent } from './components/standings/standings.component';
+import { FootballService } from './services/football.service';
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent, StandingsComponent],
@@ -24,7 +25,9 @@ import { StandingsComponent } from './components/standings/standings.component';
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    FootballService
+  ],
   bootstrap: [AppComponent, DashboardComponent, StandingsComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
