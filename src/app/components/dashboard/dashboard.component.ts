@@ -23,22 +23,22 @@ export class DashboardComponent implements OnInit {
   leagueResponse: LeaguesResponse = {};
   currentSeason: number = 0;
   currentLeagueDataIndex: number = 0;
-  standingsResponse: StandingsResponse = {}
+  standingsResponse: StandingsResponse = {};
   standingsStandings: StandingsStandings[];
+  standings: StandingsStandings[];
 
   constructor(
     private router: Router,
     private footballService: FootballService
   ) {
     this.standingsStandings = [];
+    this.standings = [];
   }
 
-  ngOnInit(): void {
-    this.getStandings();
-  }
+  ngOnInit(): void {}
 
   getLeagues(screen: string, country: string) {
-    this.selectedScreen = screen;
+    this.selectedScreen = '';
     this.selectedCountry = country;
     this.footballService.getLeagues().subscribe((res: LeaguesResponse) => {
       this.leagueResponse = res;
@@ -59,14 +59,26 @@ export class DashboardComponent implements OnInit {
         }
       );
     });
+    this.getStandings(screen);
   }
 
-  getStandings() {
+  getStandings(screen: string) {
     this.footballService.getStandings().subscribe((res: StandingsResponse) => {
+      //using any because
+      //Element implicitly has an 'any' type because expression of type '0' can't be used to index type //'StandingsResponse'.
+      //Property '0' does not exist on type 'StandingsResponse'
       this.standingsResponse = res;
-      res.league?.standings?.forEach((entry: StandingsStandings) => {
-        this.standingsStandings.push(entry);
-      });
+      if (this.standingsResponse?.response) {
+        this.standingsResponse?.response[0]?.league?.standings?.forEach(
+          (entry: StandingsStandings) => {
+            this.standingsStandings.push(entry);
+          }
+        );
+        if (this.standingsStandings.length) {
+          this.standings = this.standingsStandings;
+          this.selectedScreen = screen;
+        }
+      }
     });
   }
 }

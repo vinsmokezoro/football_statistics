@@ -59,7 +59,25 @@ export interface Fixtures {
 }
 
 export interface StandingsResponse {
+  get?: string;
+  parameters?: StandingsParameters;
+  errors?: [];
+  results?: number;
+  paging?: StandingsPaging;
+  response?: Response[];
+}
+export interface Response {
   league?: StandingsLeague;
+}
+
+export interface StandingsParameters {
+  league?: string;
+  season?: string;
+}
+
+export interface StandingsPaging {
+  current?: number;
+  total?: number;
 }
 
 export interface StandingsLeague {

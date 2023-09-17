@@ -13,7 +13,7 @@ export class FootballService {
     let headers = new HttpHeaders();
     headers = headers.append(
       'x-apisports-key',
-      'e9f3be4772ad538bb9f5afd81a9e98a4'
+      '7a5f7ed888850c01d305c25fc4686d88'
     );
 
     let requestOptions = {
@@ -32,7 +32,7 @@ export class FootballService {
     let headers = new HttpHeaders();
     headers = headers.append(
       'x-apisports-key',
-      'e9f3be4772ad538bb9f5afd81a9e98a4'
+      '7a5f7ed888850c01d305c25fc4686d88'
     );
 
     let requestOptions = {
