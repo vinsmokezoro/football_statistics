@@ -76,8 +76,8 @@ export class DashboardComponent implements OnInit {
   getStandings(screen: string) {
     this.footballService.getStandings().subscribe((res: StandingsResponse) => {
       this.standingsResponse = res;
-      if (this.standingsResponse?.response) {
-        this.standingsResponse?.response[0]?.league?.standings?.forEach(
+      if (res.response) {
+        res?.response[0]?.league?.standings?.forEach(
           (entry: StandingsStandings) => {
             this.standingsStandings.push(entry);
           }
