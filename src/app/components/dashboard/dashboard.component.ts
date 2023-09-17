@@ -52,7 +52,18 @@ export class DashboardComponent implements OnInit {
               }
             }
           );
-          if (leagueData.country.name === country) {
+          if (
+            (leagueData.country.name === 'England' &&
+              leagueData.league.name === 'Premier League') ||
+            (leagueData.country.name === 'Spain' &&
+              leagueData.league.name === 'La Liga') ||
+            (leagueData.country.name === 'France' &&
+              leagueData.league.name === 'Ligue 1') ||
+            (leagueData.country.name === 'Germany' &&
+              leagueData.league.name === 'Bundesliga') ||
+            (leagueData.country.name === 'Italy' &&
+              leagueData.league.name === 'Serie A')
+          ) {
             this.selectedCountry = country;
             this.selectedLeagueId = leagueData.league.id;
           }
@@ -64,9 +75,6 @@ export class DashboardComponent implements OnInit {
 
   getStandings(screen: string) {
     this.footballService.getStandings().subscribe((res: StandingsResponse) => {
-      //using any because
-      //Element implicitly has an 'any' type because expression of type '0' can't be used to index type //'StandingsResponse'.
-      //Property '0' does not exist on type 'StandingsResponse'
       this.standingsResponse = res;
       if (this.standingsResponse?.response) {
         this.standingsResponse?.response[0]?.league?.standings?.forEach(
