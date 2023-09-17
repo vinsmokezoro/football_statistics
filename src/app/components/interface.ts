@@ -88,46 +88,46 @@ export interface StandingsStandings {
 }
 
 export interface StandingsTeam {
-  id: number;
-  name: string;
-  logo: string;
+  id?: number;
+  name?: string;
+  logo?: string;
 }
 
 export interface StandingsAll {
-  played: number;
-  win: number;
-  draw: number;
-  lose: number;
-  goals: StandingsAllGoals;
+  played?: number;
+  win?: number;
+  draw?: number;
+  lose?: number;
+  goals?: StandingsAllGoals;
 }
 
 export interface StandingsAllGoals {
-  for: number;
-  against: number;
+  for?: number;
+  against?: number;
 }
 
 export interface StandingsHome {
-  played: number;
-  win: number;
-  draw: number;
-  lose: number;
-  goals: StandingsHomeGoals;
+  played?: number;
+  win?: number;
+  draw?: number;
+  lose?: number;
+  goals?: StandingsHomeGoals;
 }
 
 export interface StandingsHomeGoals {
-  for: number;
-  against: number;
+  for?: number;
+  against?: number;
 }
 
 export interface StandingsAway {
-  played: number;
-  win: number;
-  draw: number;
-  lose: number;
-  goals: StandingsAwayGoals;
+  played?: number;
+  win?: number;
+  draw?: number;
+  lose?: number;
+  goals?: StandingsAwayGoals;
 }
 
 export interface StandingsAwayGoals {
-  for: number;
-  against: number;
+  for?: number;
+  against?: number;
 }

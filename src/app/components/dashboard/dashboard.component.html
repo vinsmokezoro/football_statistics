@@ -10,6 +10,9 @@
     </div>
   </div>
   <div class="standings-wrapper" *ngIf="selectedScreen === 'standings'">
-    <app-standings class="standings-container"></app-standings>
+    <app-standings
+      class="standings-container"
+      [standingsStandings]="standingsStandings"
+    ></app-standings>
   </div>
 </div>

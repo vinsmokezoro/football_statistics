@@ -63,7 +63,10 @@ export class DashboardComponent implements OnInit {
 
   getStandings() {
     this.footballService.getStandings().subscribe((res: StandingsResponse) => {
-      res.league.
+      this.standingsResponse = res;
+      res.league?.standings?.forEach((entry: StandingsStandings) => {
+        this.standingsStandings.push(entry);
+      });
     });
   }
 }

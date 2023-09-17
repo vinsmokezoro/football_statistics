@@ -13,105 +13,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td scope="row" class="w-5p">1</td>
-        <td>M United</td>
-        <td>4</td>
-        <td class="w-5p">4</td>
-        <td class="w-5p">0</td>
-        <td class="w-5p">0</td>
-        <td>9</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td scope="row" class="w-5p">1</td>
-        <td>M United</td>
-        <td>4</td>
-        <td class="w-5p">4</td>
-        <td class="w-5p">0</td>
-        <td class="w-5p">0</td>
-        <td>9</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td scope="row" class="w-5p">1</td>
-        <td>M United</td>
-        <td>4</td>
-        <td class="w-5p">4</td>
-        <td class="w-5p">0</td>
-        <td class="w-5p">0</td>
-        <td>9</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td scope="row" class="w-5p">1</td>
-        <td>M United</td>
-        <td>4</td>
-        <td class="w-5p">4</td>
-        <td class="w-5p">0</td>
-        <td class="w-5p">0</td>
-        <td>9</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td scope="row" class="w-5p">1</td>
-        <td>M United</td>
-        <td>4</td>
-        <td class="w-5p">4</td>
-        <td class="w-5p">0</td>
-        <td class="w-5p">0</td>
-        <td>9</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td scope="row" class="w-5p">1</td>
-        <td>M United</td>
-        <td>4</td>
-        <td class="w-5p">4</td>
-        <td class="w-5p">0</td>
-        <td class="w-5p">0</td>
-        <td>9</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td scope="row" class="w-5p">1</td>
-        <td>M United</td>
-        <td>4</td>
-        <td class="w-5p">4</td>
-        <td class="w-5p">0</td>
-        <td class="w-5p">0</td>
-        <td>9</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td scope="row" class="w-5p">1</td>
-        <td>M United</td>
-        <td>4</td>
-        <td class="w-5p">4</td>
-        <td class="w-5p">0</td>
-        <td class="w-5p">0</td>
-        <td>9</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td scope="row" class="w-5p">1</td>
-        <td>M United</td>
-        <td>4</td>
-        <td class="w-5p">4</td>
-        <td class="w-5p">0</td>
-        <td class="w-5p">0</td>
-        <td>9</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td scope="row" class="w-5p">1</td>
-        <td>M United</td>
-        <td>4</td>
-        <td class="w-5p">4</td>
-        <td class="w-5p">0</td>
-        <td class="w-5p">0</td>
-        <td>9</td>
-        <td>12</td>
+      <tr *ngFor="let standing of standings">
+        <td scope="row" class="w-5p">{{ standing?.rank }}</td>
+        <td>{{ standing?.team?.name }}</td>
+        <td>{{ standing?.all?.played }}</td>
+        <td class="w-5p">{{ standing?.all?.win }}</td>
+        <td class="w-5p">{{ standing?.all?.lose }}</td>
+        <td class="w-5p">{{ standing?.all?.draw }}</td>
+        <td>
+          {{ standing?.all?.goals?.for }} - {{ standing?.all?.goals?.against }}
+        </td>
+        <td>{{ standing?.points }}</td>
       </tr>
     </tbody>
   </table>
