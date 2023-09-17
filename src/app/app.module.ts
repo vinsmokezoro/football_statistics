@@ -25,10 +25,8 @@ import { StandingsComponent } from './components/standings/standings.component';
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [
-    FootballService
-  ],
-  bootstrap: [AppComponent, DashboardComponent, StandingsComponent],
+  providers: [FootballService],
+  bootstrap: [AppComponent, DashboardComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class AppModule {}
